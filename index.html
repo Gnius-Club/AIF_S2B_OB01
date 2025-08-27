@@ -1,24 +1,248 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Sesión 1: Desbloqueando el Modo Creador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
-  <script src="script.js"></script>
-</body>
 
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook Sesión 1: Desbloqueando el Modo Creador</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="timer">⏱️ 00:00</span>
+                <button id="startStop">Start</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+            </ul>
+
+            <div class="sidebar-info">
+                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+
+            <!-- SECCIÓN "DE UN VISTAZO" (ANTES ACTIVITY-0) -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Resumen de la Misión</h2>
+                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
+                <div class="overview-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Objetivos de Aprendizaje:</strong>
+                                    <ul>
+                                        <li>Comprender la filosofía de Gnius Club: la transición de ser un consumidor de tecnología a un arquitecto de soluciones de impacto.</li>
+                                        <li>Identificar las plataformas y tecnologías clave que se utilizarán durante el año, con un foco especial en Delightex.</li>
+                                        <li>Entender el propósito de crear una cuenta personal como su "identidad de creador".</li>
+                                    </ul>
+                                    <strong>Secuencia de la Misión:</strong>
+                                    <ul>
+                                        <li><strong class="tactic-highlight">⚡¡Bienvenidos a Gnius Club! El Cambio de Perspectiva:</strong> (10 min)</li>
+                                        <li><strong class="tactic-highlight">⚡Tu Arsenal de Innovación: Un Vistazo a las Herramientas:</strong> (10 min)</li>
+                                        <li><strong class="tactic-highlight">⚡Forjando tu Identidad de Creador: Registro en Delightex:</strong> (20 min)</li>
+                                    </ul>
+                                    <strong>Entregable Clave:</strong>
+                                    <ul>
+                                        <li>Cada estudiante tendrá una cuenta personal y funcional en la plataforma <strong>Delightex</strong>.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <strong>Materiales Específicos:</strong>
+                                    <ul>
+                                        <li>Proyector o pantalla interactiva.</li>
+                                        <li>Conexión a internet estable y de buena velocidad.</li>
+                                        <li>Video inspirador sobre creación tecnológica (aprox. 1-2 min). Ejemplo: un reel dinámico que muestre diseño 3D, AR/VR y robótica.</li>
+                                        <li>Presentación de diapositivas para guiar la sesión.</li>
+                                        <li>Enlace directo a la página de registro de <strong>Delightex</strong>.</li>
+                                    </ul>
+                                    <strong>Preparación Previa para el Facilitador:</strong>
+                                    <ol>
+                                        <li><strong>Verificación Técnica:</strong> Asegurarse de que el proyector funcione, el audio del video se escuche bien y la conexión a internet sea robusta para soportar a toda la clase registrándose simultáneamente.</li>
+                                        <li><strong>Proceso de Registro:</strong> Realizar el proceso de registro de Delightex por cuenta propia al menos una vez para anticipar cualquier paso confuso o problema potencial.</li>
+                                        <li><strong>Video Curado:</strong> Tener el video inspirador descargado o precargado en una pestaña del navegador para evitar demoras.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
+
+            <div class="activity-card" id="activity-1">
+                <h2>⚡ Actividad 1: ¡Bienvenidos a Gnius Club! El Cambio de Perspectiva ⏰ 10 minutos</h2>
+                <p>Inspirar a los estudiantes presentando la filosofía central de Gnius Club: pasar de ser usuarios pasivos a creadores activos y arquitectos de tecnología.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: La Bienvenida y el Reto Inicial ⏰ 3 minutos</h3>
+                            <p>(El facilitador se para frente al grupo con energía y confianza).</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">¡Qué tal, bienvenidos a Gnius Club! Antes de empezar, una pregunta rápida: ¿quién de aquí usó hoy una red social, jugó un videojuego o vio un video en alguna plataforma? Levanten la mano. (Espera a que casi todos levanten la mano). Okay, casi todos. Ahora, mantengan la mano arriba si ustedes diseñaron la app, programaron el juego o crearon la plataforma de video. (Observa cómo bajan todas las manos). Exacto. Esa es la diferencia fundamental que vamos a cambiar aquí.</p>
+                                <p class="dialogue assistant">La mayoría de la gente consume tecnología. Ustedes están aquí porque no se van a conformar con eso. En Gnius Club, vamos a hacer la transición de ser *consumidores* a ser *arquitectos*. No vamos a aprender a usar apps, vamos a aprender a diseñar las experiencias que otros usarán. No vamos a limitarnos a jugar en mundos virtuales, vamos a construir esos mundos. Este es el lugar donde se deja de ser espectador y se empieza a dirigir el show.</p>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: La Misión Gnius ⏰ 5 minutos</h3>
+                            <p>(El facilitador prepara el video).</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ser un arquitecto de tecnología significa tener una visión y las herramientas para construirla. Quiero que vean un video corto. Mientras lo ven, no solo miren las cosas geniales que aparecen; piensen en la mente que tuvo que imaginar eso primero. Piensen en el proceso que llevó una idea, una simple chispa, a convertirse en algo que pueden ver y con lo que pueden interactuar. Vamos a verlo.</p>
+                                <p class="dialogue assistant">(Reproducir el video inspirador. Al terminar, pausar en una imagen impactante).</p>
+                                <p class="dialogue assistant">Perfecto. ¿Qué sintieron al ver eso? No qué vieron, sino qué sintieron. ¿Emoción? ¿Curiosidad? (Permite 2-3 respuestas breves). Esa sensación es el punto de partida de toda gran creación. Esa es la energía que vamos a usar este año. En Gnius Club, su misión no es solo aprender a manejar un software, es aprender a tomar esa curiosidad y transformarla en soluciones reales, en experiencias que dejen un impacto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: El Objetivo Concreto de Hoy ⏰ 2 minutos</h3>
+                            <p>Establecer la agenda y los objetivos prácticos de la sesión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Y todo gran viaje empieza con un primer paso. Hoy, nuestra misión es triple. Primero, entender esta nueva mentalidad de arquitecto. Segundo, conocer el arsenal de herramientas que tendrán a su disposición. Y tercero, y el más importante para hoy, forjar su identidad de creador: van a establecer su propio espacio de trabajo digital creando la primera de sus cuentas profesionales. ¿Listos para empezar?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-2">
+                <h2>⚡ Actividad 2: Tu Arsenal de Innovación: Un Vistazo a las Herramientas ⏰ 10 minutos</h2>
+                <p>Presentar las tecnologías clave del año como un ecosistema de herramientas profesionales, generando interés y entendimiento sobre el alcance del programa.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Presentación del Ecosistema Tecnológico ⏰ 5 minutos</h3>
+                            <p>(Proyectar una diapositiva con los logos de Onshape, Delightex, y MicroPython/IoT).</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Para ser un arquitecto, necesitas herramientas de primera. Este año, no vamos a usar apps simplificadas; van a manejar un ecosistema de herramientas de nivel profesional. Su arsenal incluye:</p>
+                                <ul>
+                                    <li><strong>Onshape:</strong> Piensen en esto como el estudio de un ingeniero industrial en la nube. Aquí es donde se diseñan objetos del mundo real con precisión milimétrica, desde un simple llavero hasta los componentes de un robot. Es diseño paramétrico, el estándar de la industria.</li>
+                                    <li><strong>Delightex:</strong> Este es su estudio de creación de mundos. Si alguna vez han querido diseñar un nivel de videojuego, una experiencia de Realidad Aumentada o un museo virtual, esta es la plataforma. Con Delightex, no solo imaginas universos, los construyes.</li>
+                                    <li><strong>MicroPython y el Ecosistema IoT:</strong> Aquí es donde el mundo digital y el físico chocan. Aprenderán a programar hardware, a hacer que los objetos 'piensen' y se comuniquen a través de internet. Van a construir sistemas que sienten, reaccionan y reportan datos del mundo real.</li>
+                                </ul>
+                                <p class="dialogue assistant">No son herramientas aisladas. Son piezas de un rompecabezas que, juntas, les permitirán construir soluciones complejas y con propósito.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Foco en Nuestro Punto de Partida: Delightex ⏰ 5 minutos</h3>
+                            <p>(Proyectar una diapositiva con el logo de Delightex y un video corto o GIF de una experiencia AR/VR creada en la plataforma).</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Hoy vamos a plantar nuestra bandera en uno de esos territorios: el de las experiencias inmersivas. Empezaremos con <strong>Delightex</strong>. ¿Por qué? Porque es el campo de juego perfecto para la creatividad. Es una plataforma donde la lógica de la programación se encuentra con el diseño espacial 3D. Antes de que empecemos a construir, quiero que vean de qué es capaz.</p>
+                                <p class="dialogue assistant">(Mostrar un video corto y dinámico de un proyecto interesante en Delightex: un portal de AR, una exhibición virtual, un puzzle interactivo, etc.).</p>
+                                <p class="dialogue assistant">Eso que acaban de ver fue construido con la herramienta que están a punto de configurar. Es su lienzo para contar historias, para diseñar retos, para crear espacios que solo existen en su imaginación. Para poder empezar a construir, necesitan su propio estudio, su propio taller. Y eso es exactamente lo que vamos a hacer a continuación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-3">
+                 <h2>⚡ Actividad 3: Forjando tu Identidad de Creador: Registro en Delightex ⏰ 20 minutos</h2>
+                <p>Guiar a todos los estudiantes para que completen exitosamente el proceso de registro en Delightex, estableciendo su primera herramienta de trabajo del curso.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: La Importancia de tu Espacio Digital ⏰ 3 minutos</h3>
+                            <p>Enmarcar la creación de la cuenta como un paso profesional y personal.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Muy bien, llegamos a la parte más práctica, pero también una de las más importantes de hoy. Vamos a crear su cuenta en Delightex. Esto no es como registrarse en una red social. Piensen en esta cuenta como la escritura de su primer estudio digital, su laboratorio personal. Es el espacio donde todos sus proyectos inmersivos vivirán y evolucionarán.</p>
+                                <p class="dialogue assistant">Un detalle importante: vamos a empezar a pensar como profesionales. Cuando elijan su nombre de usuario, elijan algo que los represente bien, algo que usarían en un contexto creativo. No es un apodo para jugar en línea, es el inicio de su identidad como creadores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Proceso de Registro Guiado y Colaborativo ⏰ 15 minutos</h3>
+                            <p>(Proyectar la página de registro de Delightex. El facilitador guiará el proceso desde su propia pantalla, paso a paso).</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                 <p class="dialogue assistant">Perfecto. Ahora, todos abran sus navegadores y vayan a la página de Delightex. Voy a proyectar mi pantalla y haremos cada paso juntos. Nadie se adelanta y nadie se queda atrás. Si en algún momento te atoras o algo no funciona como esperas, no te estreses, solo levanta la mano y lo resolvemos. La primera regla en el desarrollo de tecnología es que los problemas técnicos siempre aparecen; la segunda es que siempre tienen solución.</p>
+                                 <p class="dialogue assistant"><strong>Paso A:</strong> Busquen el botón de 'Registrarse' o 'Sign Up'. Hacemos clic ahí... (espera a que todos lo hagan).</p>
+                                 <p class="dialogue assistant"><strong>Paso B:</strong> Ahora, seleccionaremos el tipo de cuenta. Elegiremos 'Estudiante'... (guía a través de la interfaz específica).</p>
+                                 <p class="dialogue assistant"><strong>Paso C:</strong> Les pedirá un correo electrónico y una contraseña. Usen su correo escolar. Para la contraseña, elijan algo seguro que puedan recordar. Les recomiendo que la anoten en un lugar seguro que solo ustedes conozcan. No la compartan con nadie.</p>
+                                 <p class="dialogue assistant">(El facilitador se mueve por el salón, monitoreando el progreso, ayudando con errores de tipeo, problemas de contraseña o cualquier otro obstáculo. Mantiene un ambiente de calma y colaboración).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: Verificación y Cierre Exitoso ⏰ 2 minutos</h3>
+                            <p>(Una vez que la mayoría haya terminado, se hace un chequeo final).</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Excelente. ¿Quién ya está dentro de su nuevo dashboard de Delightex? Levanten la mano. (Celebra el logro). ¡Felicidades! Acaban de establecer oficialmente su primer taller de creación digital. Han dado el primer paso real para pasar de consumidores a arquitectos.</p>
+                                <p class="dialogue assistant">Hoy, hemos cambiado la mentalidad, hemos explorado nuestro futuro arsenal y hemos forjado nuestra identidad de creador. En la próxima sesión, conocerán a su copiloto de IA, Xolo, y entenderán cómo él va a potenciar todo lo que hagan en este nuevo espacio. Guarden bien sus contraseñas. Su viaje acaba de empezar. ¡Buen trabajo a todos!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
